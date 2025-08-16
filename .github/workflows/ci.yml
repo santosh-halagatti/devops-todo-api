@@ -9,6 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    - name: Run tests
+  run: |
+    export PYTHONPATH=$PYTHONPATH:$(pwd)
+    pytest
+
 
     steps:
       - name: Checkout repo
